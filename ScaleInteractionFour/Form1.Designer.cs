@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblError = new System.Windows.Forms.Label();
+            this.lblFour = new System.Windows.Forms.Label();
+            this.lblThree = new System.Windows.Forms.Label();
+            this.lblTwo = new System.Windows.Forms.Label();
+            this.lblOne = new System.Windows.Forms.Label();
             this.rdoOne = new System.Windows.Forms.RadioButton();
+            this.rdoFour = new System.Windows.Forms.RadioButton();
             this.rdoTwo = new System.Windows.Forms.RadioButton();
             this.rdoThree = new System.Windows.Forms.RadioButton();
-            this.rdoFour = new System.Windows.Forms.RadioButton();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.txtRand = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblOne = new System.Windows.Forms.Label();
-            this.lblTwo = new System.Windows.Forms.Label();
-            this.lblThree = new System.Windows.Forms.Label();
-            this.lblFour = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblError);
             this.groupBox1.Controls.Add(this.lblFour);
             this.groupBox1.Controls.Add(this.lblThree);
             this.groupBox1.Controls.Add(this.lblTwo);
@@ -63,6 +63,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Port Selection";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(85, 0);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(46, 13);
+            this.lblError.TabIndex = 10;
+            this.lblError.Text = "ERROR";
+            // 
+            // lblFour
+            // 
+            this.lblFour.AutoSize = true;
+            this.lblFour.Location = new System.Drawing.Point(57, 146);
+            this.lblFour.Name = "lblFour";
+            this.lblFour.Size = new System.Drawing.Size(35, 13);
+            this.lblFour.TabIndex = 9;
+            this.lblFour.Text = "label4";
+            // 
+            // lblThree
+            // 
+            this.lblThree.AutoSize = true;
+            this.lblThree.Location = new System.Drawing.Point(57, 110);
+            this.lblThree.Name = "lblThree";
+            this.lblThree.Size = new System.Drawing.Size(35, 13);
+            this.lblThree.TabIndex = 8;
+            this.lblThree.Text = "label3";
+            // 
+            // lblTwo
+            // 
+            this.lblTwo.AutoSize = true;
+            this.lblTwo.Location = new System.Drawing.Point(57, 75);
+            this.lblTwo.Name = "lblTwo";
+            this.lblTwo.Size = new System.Drawing.Size(35, 13);
+            this.lblTwo.TabIndex = 7;
+            this.lblTwo.Text = "label2";
+            // 
+            // lblOne
+            // 
+            this.lblOne.AutoSize = true;
+            this.lblOne.Location = new System.Drawing.Point(57, 39);
+            this.lblOne.Name = "lblOne";
+            this.lblOne.Size = new System.Drawing.Size(35, 13);
+            this.lblOne.TabIndex = 6;
+            this.lblOne.Text = "label1";
+            // 
             // rdoOne
             // 
             this.rdoOne.AutoSize = true;
@@ -73,6 +118,17 @@
             this.rdoOne.TabStop = true;
             this.rdoOne.Text = "radioButton1";
             this.rdoOne.UseVisualStyleBackColor = true;
+            // 
+            // rdoFour
+            // 
+            this.rdoFour.AutoSize = true;
+            this.rdoFour.Location = new System.Drawing.Point(28, 126);
+            this.rdoFour.Name = "rdoFour";
+            this.rdoFour.Size = new System.Drawing.Size(85, 17);
+            this.rdoFour.TabIndex = 5;
+            this.rdoFour.TabStop = true;
+            this.rdoFour.Text = "radioButton4";
+            this.rdoFour.UseVisualStyleBackColor = true;
             // 
             // rdoTwo
             // 
@@ -97,17 +153,6 @@
             this.rdoThree.Text = "radioButton3";
             this.rdoThree.UseVisualStyleBackColor = true;
             // 
-            // rdoFour
-            // 
-            this.rdoFour.AutoSize = true;
-            this.rdoFour.Location = new System.Drawing.Point(28, 126);
-            this.rdoFour.Name = "rdoFour";
-            this.rdoFour.Size = new System.Drawing.Size(85, 17);
-            this.rdoFour.TabIndex = 5;
-            this.rdoFour.TabStop = true;
-            this.rdoFour.Text = "radioButton4";
-            this.rdoFour.UseVisualStyleBackColor = true;
-            // 
             // txtRand
             // 
             this.txtRand.Location = new System.Drawing.Point(215, 23);
@@ -125,51 +170,6 @@
             this.button1.Text = "Port Test";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblOne
-            // 
-            this.lblOne.AutoSize = true;
-            this.lblOne.Location = new System.Drawing.Point(57, 39);
-            this.lblOne.Name = "lblOne";
-            this.lblOne.Size = new System.Drawing.Size(35, 13);
-            this.lblOne.TabIndex = 6;
-            this.lblOne.Text = "label1";
-            // 
-            // lblTwo
-            // 
-            this.lblTwo.AutoSize = true;
-            this.lblTwo.Location = new System.Drawing.Point(57, 75);
-            this.lblTwo.Name = "lblTwo";
-            this.lblTwo.Size = new System.Drawing.Size(35, 13);
-            this.lblTwo.TabIndex = 7;
-            this.lblTwo.Text = "label2";
-            // 
-            // lblThree
-            // 
-            this.lblThree.AutoSize = true;
-            this.lblThree.Location = new System.Drawing.Point(57, 110);
-            this.lblThree.Name = "lblThree";
-            this.lblThree.Size = new System.Drawing.Size(35, 13);
-            this.lblThree.TabIndex = 8;
-            this.lblThree.Text = "label3";
-            // 
-            // lblFour
-            // 
-            this.lblFour.AutoSize = true;
-            this.lblFour.Location = new System.Drawing.Point(57, 146);
-            this.lblFour.Name = "lblFour";
-            this.lblFour.Size = new System.Drawing.Size(35, 13);
-            this.lblFour.TabIndex = 9;
-            this.lblFour.Text = "label4";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "ERROR";
             // 
             // Form1
             // 
@@ -202,7 +202,7 @@
         private System.Windows.Forms.Label lblThree;
         private System.Windows.Forms.Label lblTwo;
         private System.Windows.Forms.Label lblOne;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblError;
     }
 }
 

@@ -15,6 +15,11 @@ namespace ScaleInteractionFour
             rdoTwo.Visible = false;
             rdoThree.Visible = false;
             rdoFour.Visible = false;
+            lblOne.Visible = false;
+            lblTwo.Visible = false;
+            lblThree.Visible = false;
+            lblFour.Visible = false;
+
             try
             {
                 getAvaliablePorts();
