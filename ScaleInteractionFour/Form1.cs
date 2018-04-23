@@ -9,9 +9,6 @@ namespace ScaleInteractionFour
 {
     public partial class Form1 : Form
     {
-        private const string vidPattern = @"VID_([0-9A-F]{4})";
-        private const string pidPattern = @"PID_([0-9A-F]{4})";
-
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +33,6 @@ namespace ScaleInteractionFour
             }
             
         }
-
 
         #region port Open/Close
         // Open Port
