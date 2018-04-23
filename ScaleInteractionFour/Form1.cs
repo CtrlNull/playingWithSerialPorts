@@ -82,7 +82,7 @@ namespace ScaleInteractionFour
         }
         #endregion
 
-        #region Available Ports
+        #region Available Ports and Details
         void getAvaliablePorts()
         {
             String[] ports = SerialPort.GetPortNames();
