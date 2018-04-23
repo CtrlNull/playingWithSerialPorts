@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Management;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace ScaleInteractionFour
 {
@@ -11,6 +10,7 @@ namespace ScaleInteractionFour
     {
         public Form1()
         {
+            #region ~~Main~~
             InitializeComponent();
             rdoOne.Visible = false;
             rdoTwo.Visible = false;
@@ -31,7 +31,7 @@ namespace ScaleInteractionFour
                 lblError.Visible = true;
                 txtRand.Text = ex.ToString();
             }
-            
+            #endregion
         }
 
         #region port Open/Close
@@ -85,6 +85,7 @@ namespace ScaleInteractionFour
         #endregion
 
         #region Available Ports and Details
+        
         void getAvaliablePorts()
         {
             String[] ports = SerialPort.GetPortNames();
@@ -134,6 +135,7 @@ namespace ScaleInteractionFour
                     break;
             }
         }
+
         void getPortDetails()
         {
             using (var searcher = new ManagementObjectSearcher
@@ -171,14 +173,12 @@ namespace ScaleInteractionFour
         }
         #endregion
 
+        #region Buttons
 
         private void button1_Click(object sender, EventArgs e)
         {
             portSettings();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
+        #endregion
     }
 }
