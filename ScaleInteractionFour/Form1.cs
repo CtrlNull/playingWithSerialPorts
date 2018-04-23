@@ -19,6 +19,7 @@ namespace ScaleInteractionFour
             lblTwo.Visible = false;
             lblThree.Visible = false;
             lblFour.Visible = false;
+            lblError.Visible = false;
 
             try
             {
@@ -26,7 +27,7 @@ namespace ScaleInteractionFour
             }
             catch
             {
-
+                lblError.Visible = true;
             }
 
         }
@@ -92,41 +93,51 @@ namespace ScaleInteractionFour
             {
                 case 1:
                     rdoOne.Visible = true;
+                    lblOne.Visible = true;
                     rdoOne.Text = ports[0];
                     lblOne.Text = "Rand Port Name";
                     break;
                 case 2:
                     rdoOne.Visible = true;
+                    lblOne.Visible = true;
+                    rdoOne.Text = ports[0];
+                    lblOne.Text = "Rand Port Name";
                     rdoTwo.Visible = true;
-                    rdoOne.Text =  ports[0];
-                    lblOne.Text = "Rand Port Name";
-                    rdoTwo.Text =  ports[1];
-                    lblOne.Text = "Rand Port Name";
+                    lblTwo.Visible = true;
+                    rdoTwo.Text = ports[1];
+                    lblTwo.Text = "Rand Port Name";
                     break;
                 case 3:
                     rdoOne.Visible = true;
-                    rdoTwo.Visible = true;
-                    rdoThree.Visible = true;
+                    lblOne.Visible = true;
                     rdoOne.Text = ports[0];
                     lblOne.Text = "Rand Port Name";
+                    rdoTwo.Visible = true;
+                    lblTwo.Visible = true;
                     rdoTwo.Text = ports[1];
-                    lblOne.Text = "Rand Port Name";
-                    rdoThree.Text =  ports[2];
-                    lblOne.Text = "Rand Port Name";
+                    lblTwo.Text = "Rand Port Name";
+                    lblThree.Visible = true;
+                    rdoThree.Visible = true;
+                    rdoThree.Text = ports[2];
+                    lblThree.Text = "Rand Port Name";
                     break;
                 case 4:
                     rdoOne.Visible = true;
-                    rdoTwo.Visible = true;
-                    rdoThree.Visible = true;
-                    rdoFour.Visible = true;
+                    lblOne.Visible = true;
                     rdoOne.Text = ports[0];
                     lblOne.Text = "Rand Port Name";
+                    rdoTwo.Visible = true;
+                    lblTwo.Visible = true;
                     rdoTwo.Text =  ports[1];
-                    lblOne.Text = "Rand Port Name";
+                    lblTwo.Text = "Rand Port Name";
+                    lblThree.Visible = true;
+                    rdoThree.Visible = true;
                     rdoThree.Text =  ports[2];
-                    lblOne.Text = "Rand Port Name";
+                    lblThree.Text = "Rand Port Name";
+                    rdoFour.Visible = true;
+                    lblFour.Visible = true;
                     rdoFour.Text = ports[3];
-                    lblOne.Text = "Rand Port Name";
+                    lblFour.Text = "Rand Port Name";
                     break;
             }
 
