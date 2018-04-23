@@ -41,11 +41,13 @@
             this.lblTwo = new System.Windows.Forms.Label();
             this.lblThree = new System.Windows.Forms.Label();
             this.lblFour = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblFour);
             this.groupBox1.Controls.Add(this.lblThree);
             this.groupBox1.Controls.Add(this.lblTwo);
@@ -160,6 +162,15 @@
             this.lblFour.TabIndex = 9;
             this.lblFour.Text = "label4";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(85, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "ERROR";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +202,7 @@
         private System.Windows.Forms.Label lblThree;
         private System.Windows.Forms.Label lblTwo;
         private System.Windows.Forms.Label lblOne;
+        private System.Windows.Forms.Label label1;
     }
 }
 

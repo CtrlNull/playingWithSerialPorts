@@ -11,10 +11,18 @@ namespace ScaleInteractionFour
         public Form1()
         {
             InitializeComponent();
+            rdoOne.Visible = false;
             rdoTwo.Visible = false;
             rdoThree.Visible = false;
             rdoFour.Visible = false;
-            getAvaliablePorts(); // Sets ports buttons/ boxes
+            try
+            {
+                getAvaliablePorts();
+            }
+            catch
+            {
+
+            }
 
         }
         #region port Open/Close
@@ -78,29 +86,42 @@ namespace ScaleInteractionFour
             switch (numbPorts)
             {
                 case 1:
-                    rdoOne.Text = "Rand Port Name, " + ports[0];
+                    rdoOne.Visible = true;
+                    rdoOne.Text = ports[0];
+                    lblOne.Text = "Rand Port Name";
                     break;
                 case 2:
+                    rdoOne.Visible = true;
                     rdoTwo.Visible = true;
-                    rdoOne.Text = "Rand Port Name, " + ports[0];
-                    rdoTwo.Text = "Rand Port Name, " + ports[1];
+                    rdoOne.Text =  ports[0];
+                    lblOne.Text = "Rand Port Name";
+                    rdoTwo.Text =  ports[1];
+                    lblOne.Text = "Rand Port Name";
                     break;
                 case 3:
+                    rdoOne.Visible = true;
                     rdoTwo.Visible = true;
                     rdoThree.Visible = true;
-                    rdoOne.Text = "Rand Port Name, " + ports[0];
-                    rdoTwo.Text = "Rand Port Name, " + ports[1];
-                    rdoThree.Text = "Rand Port Name, " + ports[2];
-
+                    rdoOne.Text = ports[0];
+                    lblOne.Text = "Rand Port Name";
+                    rdoTwo.Text = ports[1];
+                    lblOne.Text = "Rand Port Name";
+                    rdoThree.Text =  ports[2];
+                    lblOne.Text = "Rand Port Name";
                     break;
                 case 4:
+                    rdoOne.Visible = true;
                     rdoTwo.Visible = true;
                     rdoThree.Visible = true;
                     rdoFour.Visible = true;
-                    rdoOne.Text = "Rand Port Name, " + ports[0];
-                    rdoTwo.Text = "Rand Port Name, " + ports[1];
-                    rdoThree.Text = "Rand Port Name, " + ports[2];
-                    rdoFour.Text = "Rand Port Name, " + ports[3];
+                    rdoOne.Text = ports[0];
+                    lblOne.Text = "Rand Port Name";
+                    rdoTwo.Text =  ports[1];
+                    lblOne.Text = "Rand Port Name";
+                    rdoThree.Text =  ports[2];
+                    lblOne.Text = "Rand Port Name";
+                    rdoFour.Text = ports[3];
+                    lblOne.Text = "Rand Port Name";
                     break;
             }
 
