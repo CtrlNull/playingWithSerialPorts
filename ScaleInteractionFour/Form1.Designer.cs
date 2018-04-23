@@ -42,6 +42,7 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.txtRand = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.groupBox1.Controls.Add(this.rdoThree);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(196, 168);
+            this.groupBox1.Size = new System.Drawing.Size(282, 168);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Port Selection";
@@ -66,6 +67,7 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(85, 0);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(46, 13);
@@ -75,7 +77,7 @@
             // lblFour
             // 
             this.lblFour.AutoSize = true;
-            this.lblFour.Location = new System.Drawing.Point(57, 146);
+            this.lblFour.Location = new System.Drawing.Point(25, 146);
             this.lblFour.Name = "lblFour";
             this.lblFour.Size = new System.Drawing.Size(35, 13);
             this.lblFour.TabIndex = 9;
@@ -84,7 +86,7 @@
             // lblThree
             // 
             this.lblThree.AutoSize = true;
-            this.lblThree.Location = new System.Drawing.Point(57, 110);
+            this.lblThree.Location = new System.Drawing.Point(25, 110);
             this.lblThree.Name = "lblThree";
             this.lblThree.Size = new System.Drawing.Size(35, 13);
             this.lblThree.TabIndex = 8;
@@ -93,7 +95,7 @@
             // lblTwo
             // 
             this.lblTwo.AutoSize = true;
-            this.lblTwo.Location = new System.Drawing.Point(57, 75);
+            this.lblTwo.Location = new System.Drawing.Point(25, 75);
             this.lblTwo.Name = "lblTwo";
             this.lblTwo.Size = new System.Drawing.Size(35, 13);
             this.lblTwo.TabIndex = 7;
@@ -102,7 +104,7 @@
             // lblOne
             // 
             this.lblOne.AutoSize = true;
-            this.lblOne.Location = new System.Drawing.Point(57, 39);
+            this.lblOne.Location = new System.Drawing.Point(25, 39);
             this.lblOne.Name = "lblOne";
             this.lblOne.Size = new System.Drawing.Size(35, 13);
             this.lblOne.TabIndex = 6;
@@ -155,15 +157,15 @@
             // 
             // txtRand
             // 
-            this.txtRand.Location = new System.Drawing.Point(215, 23);
+            this.txtRand.Location = new System.Drawing.Point(301, 13);
             this.txtRand.Multiline = true;
             this.txtRand.Name = "txtRand";
-            this.txtRand.Size = new System.Drawing.Size(127, 113);
+            this.txtRand.Size = new System.Drawing.Size(156, 113);
             this.txtRand.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(243, 142);
+            this.button1.Location = new System.Drawing.Point(301, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -171,11 +173,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(382, 139);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "PortName";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 196);
+            this.ClientSize = new System.Drawing.Size(471, 192);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRand);
             this.Controls.Add(this.groupBox1);
@@ -203,6 +216,7 @@
         private System.Windows.Forms.Label lblTwo;
         private System.Windows.Forms.Label lblOne;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button button2;
     }
 }
 

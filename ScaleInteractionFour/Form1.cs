@@ -3,11 +3,15 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Management;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ScaleInteractionFour
 {
     public partial class Form1 : Form
     {
+        private const string vidPattern = @"VID_([0-9A-F]{4})";
+        private const string pidPattern = @"PID_([0-9A-F]{4})";
+
         public Form1()
         {
             InitializeComponent();
@@ -25,12 +29,15 @@ namespace ScaleInteractionFour
             {
                 getAvaliablePorts();
             }
-            catch
+            catch (Exception ex)
             {
                 lblError.Visible = true;
+                txtRand.Text = ex.ToString();
             }
-
+            
         }
+
+
         #region port Open/Close
         // Open Port
         void openPort()
@@ -70,15 +77,14 @@ namespace ScaleInteractionFour
 
         void portSettings()
         {
+            // Checks if radio button is checked
             var checkedButton = groupBox1.Controls.OfType<RadioButton>()
                                   .FirstOrDefault(r => r.Checked);
             txtRand.Text = checkedButton.Text;
 
-            //serialPort1.PortName = Convert.ToString(cboPorts.Text); // find selected radio button
-
+            serialPort1.PortName = Convert.ToString(checkedButton.Text); // Attached radio button text
             serialPort1.BaudRate = 9600; // Important* set BaudRate from scale
             serialPort1.Parity = Parity.None; // Important* set Parity from scale
-
         }
         #endregion
 
@@ -86,6 +92,7 @@ namespace ScaleInteractionFour
         void getAvaliablePorts()
         {
             String[] ports = SerialPort.GetPortNames();
+            getPortDetails();
 
             int numbPorts = ports.Length;
 
@@ -95,65 +102,87 @@ namespace ScaleInteractionFour
                     rdoOne.Visible = true;
                     lblOne.Visible = true;
                     rdoOne.Text = ports[0];
-                    lblOne.Text = "Rand Port Name";
                     break;
                 case 2:
                     rdoOne.Visible = true;
                     lblOne.Visible = true;
                     rdoOne.Text = ports[0];
-                    lblOne.Text = "Rand Port Name";
                     rdoTwo.Visible = true;
                     lblTwo.Visible = true;
                     rdoTwo.Text = ports[1];
-                    lblTwo.Text = "Rand Port Name";
                     break;
                 case 3:
                     rdoOne.Visible = true;
                     lblOne.Visible = true;
                     rdoOne.Text = ports[0];
-                    lblOne.Text = "Rand Port Name";
                     rdoTwo.Visible = true;
                     lblTwo.Visible = true;
                     rdoTwo.Text = ports[1];
-                    lblTwo.Text = "Rand Port Name";
                     lblThree.Visible = true;
                     rdoThree.Visible = true;
                     rdoThree.Text = ports[2];
-                    lblThree.Text = "Rand Port Name";
                     break;
                 case 4:
                     rdoOne.Visible = true;
                     lblOne.Visible = true;
                     rdoOne.Text = ports[0];
-                    lblOne.Text = "Rand Port Name";
                     rdoTwo.Visible = true;
                     lblTwo.Visible = true;
                     rdoTwo.Text =  ports[1];
-                    lblTwo.Text = "Rand Port Name";
                     lblThree.Visible = true;
                     rdoThree.Visible = true;
                     rdoThree.Text =  ports[2];
-                    lblThree.Text = "Rand Port Name";
                     rdoFour.Visible = true;
                     lblFour.Visible = true;
                     rdoFour.Text = ports[3];
-                    lblFour.Text = "Rand Port Name";
                     break;
             }
-
-            void getPortDetails()
-            {
-                // TODO: find a way to list port details
-            }
-
-
-            #endregion
         }
+        void getPortDetails()
+        {
+            using (var searcher = new ManagementObjectSearcher
+                 ("SELECT * FROM WIN32_SerialPort"))
+            {
+                string[] portnames = SerialPort.GetPortNames();
+                var ports = searcher.Get().Cast<ManagementBaseObject>().ToList();
+                var tList = (from n in portnames
+                             join p in ports on n equals p["DeviceID"].ToString()
+                             select n + " - " + p["Caption"]).ToList();
+                int list = tList.ToArray().Length;
+
+                switch (list)
+                {
+                    case 1:
+                        lblOne.Text = tList[0].ToString();
+                        break;
+                    case 2:
+                        lblOne.Text = tList[0].ToString();
+                        lblTwo.Text = tList[1].ToString();
+                        break;
+                    case 3:
+                        lblOne.Text = tList[0].ToString();
+                        lblTwo.Text = tList[1].ToString();
+                        lblThree.Text = tList[2].ToString();
+                        break;
+                    case 4:
+                        lblOne.Text = tList[0].ToString();
+                        lblTwo.Text = tList[1].ToString();
+                        lblThree.Text = tList[2].ToString();
+                        lblFour.Text = tList[3].ToString();
+                        break;
+                }
+            }
+        }
+        #endregion
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             portSettings();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
