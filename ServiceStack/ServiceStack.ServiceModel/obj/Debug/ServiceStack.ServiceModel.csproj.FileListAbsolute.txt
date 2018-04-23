@@ -1,0 +1,9 @@
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\bin\Debug\ServiceStack.ServiceModel.dll
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\bin\Debug\ServiceStack.ServiceModel.pdb
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\obj\Debug\ServiceStack.ServiceModel.csprojResolveAssemblyReference.cache
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\obj\Debug\ServiceStack.ServiceModel.csproj.CoreCompileInputs.cache
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\obj\Debug\ServiceStack.ServiceModel.csproj.CopyComplete
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\obj\Debug\ServiceStack.ServiceModel.dll
+C:\Users\Ralph_Fonz\repos\ScaleInteractionFour\ServiceStack\ServiceStack.ServiceModel\obj\Debug\ServiceStack.ServiceModel.pdb

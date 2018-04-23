@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Management;
 
 namespace ScaleInteractionFour
 {
@@ -16,9 +12,11 @@ namespace ScaleInteractionFour
         public Form1()
         {
             InitializeComponent();
-            radioButton2.Visible = false;
-            radioButton3.Visible = false;
-            radioButton4.Visible = false;
+            rdoTwo.Visible = false;
+            rdoThree.Visible = false;
+            rdoFour.Visible = false;
+
+            getAvaliablePorts(); // Sets ports buttons/ boxes
 
             #region port Open/Close
             // Open Port
@@ -54,8 +52,29 @@ namespace ScaleInteractionFour
                 serialPort1.Parity = Parity.None; // Important* set Parity from scale
 
             }
+            #endregion
+
+            #region Available Ports
+            void getAvaliablePorts()
+            {
+                String[] ports = SerialPort.GetPortNames();
+                cboPorts.Items.AddRange(ports);
+
+                int numbPorts = ports.Length;
+                txtRand.Text = numbPorts.ToString();
+                //TODO: go through ports array and display on radio buttons
+                    
 
 
+                void getPortDetails()
+                {
+                    // TODO: find a way to list port details
+                }
+
+
+                #endregion
+            }
         }
+        
     }
 }

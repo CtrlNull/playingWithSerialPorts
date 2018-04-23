@@ -32,11 +32,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboPorts = new System.Windows.Forms.ComboBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.rdoOne = new System.Windows.Forms.RadioButton();
+            this.rdoTwo = new System.Windows.Forms.RadioButton();
+            this.rdoThree = new System.Windows.Forms.RadioButton();
+            this.rdoFour = new System.Windows.Forms.RadioButton();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.txtRand = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,60 +67,69 @@
             this.checkedListBox1.Size = new System.Drawing.Size(142, 139);
             this.checkedListBox1.TabIndex = 1;
             // 
-            // radioButton1
+            // rdoOne
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(36, 182);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoOne.AutoSize = true;
+            this.rdoOne.Location = new System.Drawing.Point(36, 182);
+            this.rdoOne.Name = "rdoOne";
+            this.rdoOne.Size = new System.Drawing.Size(85, 17);
+            this.rdoOne.TabIndex = 2;
+            this.rdoOne.TabStop = true;
+            this.rdoOne.Text = "radioButton1";
+            this.rdoOne.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoTwo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(36, 206);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoTwo.AutoSize = true;
+            this.rdoTwo.Location = new System.Drawing.Point(36, 206);
+            this.rdoTwo.Name = "rdoTwo";
+            this.rdoTwo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rdoTwo.Size = new System.Drawing.Size(85, 17);
+            this.rdoTwo.TabIndex = 3;
+            this.rdoTwo.TabStop = true;
+            this.rdoTwo.Text = "radioButton2";
+            this.rdoTwo.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdoThree
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(36, 230);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoThree.AutoSize = true;
+            this.rdoThree.Location = new System.Drawing.Point(36, 230);
+            this.rdoThree.Name = "rdoThree";
+            this.rdoThree.Size = new System.Drawing.Size(85, 17);
+            this.rdoThree.TabIndex = 4;
+            this.rdoThree.TabStop = true;
+            this.rdoThree.Text = "radioButton3";
+            this.rdoThree.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdoFour
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(36, 254);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdoFour.AutoSize = true;
+            this.rdoFour.Location = new System.Drawing.Point(36, 254);
+            this.rdoFour.Name = "rdoFour";
+            this.rdoFour.Size = new System.Drawing.Size(85, 17);
+            this.rdoFour.TabIndex = 5;
+            this.rdoFour.TabStop = true;
+            this.rdoFour.Text = "radioButton4";
+            this.rdoFour.UseVisualStyleBackColor = true;
+            // 
+            // txtRand
+            // 
+            this.txtRand.Location = new System.Drawing.Point(272, 182);
+            this.txtRand.Multiline = true;
+            this.txtRand.Name = "txtRand";
+            this.txtRand.Size = new System.Drawing.Size(127, 113);
+            this.txtRand.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 401);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.txtRand);
+            this.Controls.Add(this.rdoFour);
+            this.Controls.Add(this.rdoThree);
+            this.Controls.Add(this.rdoTwo);
+            this.Controls.Add(this.rdoOne);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -135,11 +145,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cboPorts;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton rdoOne;
+        private System.Windows.Forms.RadioButton rdoTwo;
+        private System.Windows.Forms.RadioButton rdoThree;
+        private System.Windows.Forms.RadioButton rdoFour;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.TextBox txtRand;
     }
 }
 
