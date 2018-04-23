@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.rdoThree);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(196, 180);
+            this.groupBox1.Size = new System.Drawing.Size(196, 168);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Port Selection";
@@ -163,7 +163,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(215, 142);
+            this.button1.Location = new System.Drawing.Point(243, 142);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -175,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 216);
+            this.ClientSize = new System.Drawing.Size(353, 196);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRand);
             this.Controls.Add(this.groupBox1);

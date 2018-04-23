@@ -141,7 +141,6 @@ namespace ScaleInteractionFour
                     break;
             }
 
-
             void getPortDetails()
             {
                 // TODO: find a way to list port details
